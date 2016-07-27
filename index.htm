@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>my_paln_of_five</title>
+        <style type="text/css">
+            body
+            {
+                padding:0px;
+                margin:auto;
+                width:900px;
+
+            }
+            #content
+            {
+                width:980px;
+            }
+        </style>
+        <script>
+            function disp_plan()
+            {
+                var plan_date=new Date("8/06/2021 23:30:00");
+                var now_date=new Date();
+                var write_date=new Date("18/05/2016 23:00:00");
+                now_date.setTime(now_date.getTime()+1000);
+                //获取天数
+                days=(plan_date-now_date)/1000/60/60/24;
+                dnum=Math.floor(days);
+                //获取小时
+                hour=(plan_date-now_date)/1000/60/60-(24*dnum);
+                hnum=Math.floor(hour);
+                if(String(hnum).length==1)
+                {
+                    hnum="0"+hnum;
+                }
+                minutes=(plan_date-now_date)/1000/60-(24*60*dnum)-(60*hnum);
+                mnum=Math.floor(minutes);
+                if(String(mnum).length==1)
+                {
+                    mnum="0"+mnum;
+                }
+                seconds=(plan_date-now_date)/1000-(24*60*60*dnum)-(60*60*hnum)-(60*mnum);
+                snum=Math.round(seconds);
+                if(String (snum).length==1)
+                {
+                    snum="0"+snum;
+                }
+                str="<center>距十年之约还有："+dnum+"天"+hnum+"时"+mnum+"<span style='margin:0 7px 0 7px'>分</span><font color=red>"+snum+"</font>秒</center>";
+                document.getElementById("time").innerHTML=str;
+            }
+            setInterval(disp_plan,1000);
+        </script>
+    </head>
+    <body>
+    <center>
+        <div id="content">
+        <div id="time"></div>
+        <h1>我的五年计划</h1>
+    </center>
+        <div>
+          
+
+          <p>&nbsp&nbsp&nbsp&nbsp今天是2016年的高考的第一天，也是我决定写下五年计划。前几天我做了一件傻事，导致我现在想的很明白我要的是什么，就是一个安全感。</p>
+            <p>&nbsp&nbsp&nbsp&nbsp2016年2月23日是我第一次失恋，我开始意识到我应该有点心眼了，因为并不是所有人都是和我想象的一样，只是我今天仔细思考后，发现我找不到了想和他在一起的理由，所以我今天第一次认真的听完了所有的课，心特别的敞亮。我要是想不开是真的想不开，但是我要是想开了，一切就真结束了。</p>
+            <p>&nbsp&nbsp&nbsp&nbsp废话不多说，接下来就是我的日常计划:</p>
+            <p>&nbsp&nbsp&nbsp&nbsp一、就我的个人专业来讲，电子专业，是我最理想的专业，主修物理和数学及各种电路知识，我也很有兴趣继续学下去。这是大二下学期，由于大<p>&nbsp&nbsp&nbsp&nbsp二上学期，由于大二上学期的缓考和这学期的状态不佳耽误了很多的时间，但用这一年的时间来调整我的人生方向还是很少的。我会选择一个好的城市当然学校也好的地方去读研究生</p>
+            <p>&nbsp&nbsp&nbspnbsp二、就个人体质来讲，由于最近一段时间的自残，导致我体重直线下降，不健康！我会坚持每周三次健身，周末做瑜伽，平时多做一些柔韧性训练，提高身体的柔软度。</p>
+            <p>&nbsp&nbsp&nbsp&nbsp三、就人脉来讲，不刻意随缘就好，没啥需要，本身性格就好交朋友……</p>
+            <p>&nbsp&nbsp&nbsp&nbsp四、就个人的业余生活来讲，平时可以多看一些喜欢的动漫，尽量的看些好书，晚上去散步或者进行短跑训练。兼修其他专业得知识。</p>
+            <p>&nbsp&nbsp&nbsp&nbsp五、就个人能力的提升<br />
+                &nbsp&nbsp&nbsp&nbsp学一门外语——韩语，<br />
+                &nbsp&nbsp&nbsp&nbsp自学素描和简笔<br />
+                &nbsp&nbsp&nbsp&nbsp学一门乐器——初步定为吉他或者电子琴<br /></p>
+            <p>&nbsp&nbsp&nbsp&nbsp六、多关心家人
+                &nbsp&nbsp&nbsp&nbsp这是最应该花心思的地方！<br />
+                &nbsp&nbsp&nbsp&nbsp保持身材，不能暴饮暴食，要每天敷面膜<br /></p>
+            <p>&nbsp&nbsp&nbsp&nbsp八、我觉得性格挺好的，就是有时候太执着，想的有点多，为别人考虑的总是比为为自己l考虑的多……应该懂得拒绝。</p>
+            <p>&nbsp&nbsp&nbsp&nbsp九、想出去看看~玩玩~闯闯~</p>
+ 
+        </div>
+        </div>
+
+    </body>
+</html>

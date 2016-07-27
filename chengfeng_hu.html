@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>my_paln_of_ten</title>
+        <style type="text/css">
+            body
+            {
+                padding:0px;
+                margin:auto;
+                width:900px;
+
+            }
+            #content
+            {
+                width:980px;
+            }
+        </style>
+        <script>
+            function disp_plan()
+            {
+                var plan_date=new Date("18/05/2026 23:30:00");
+                var now_date=new Date();
+                var write_date=new Date("18/05/2016 23:00:00");
+                now_date.setTime(now_date.getTime()+1000);
+                //获取天数
+                days=(plan_date-now_date)/1000/60/60/24;
+                dnum=Math.floor(days);
+                //获取小时
+                hour=(plan_date-now_date)/1000/60/60-(24*dnum);
+                hnum=Math.floor(hour);
+                if(String(hnum).length==1)
+                {
+                    hnum="0"+hnum;
+                }
+                minutes=(plan_date-now_date)/1000/60-(24*60*dnum)-(60*hnum);
+                mnum=Math.floor(minutes);
+                if(String(mnum).length==1)
+                {
+                    mnum="0"+mnum;
+                }
+                seconds=(plan_date-now_date)/1000-(24*60*60*dnum)-(60*60*hnum)-(60*mnum);
+                snum=Math.round(seconds);
+                if(String (snum).length==1)
+                {
+                    snum="0"+snum;
+                }
+                str="<center>距十年之约还有："+dnum+"天"+hnum+"时"+mnum+"<span style='margin:0 7px 0 7px'>分</span><font color=red>"+snum+"</font>秒</center>";
+                document.getElementById("time").innerHTML=str;
+            }
+            setInterval(disp_plan,1000);
+        </script>
+    </head>
+    <body>
+    <center>
+        <div id="content">
+        <div id="time"></div>
+        <h1>一梦十年</h1>
+    </center>
+        <div>
+            <p>
+                &nbsp&nbsp&nbsp&nbsp在很久之前，我就写下了我的十年计划，但是没有这么详细。现在我将奋斗目标精确到年，然后自己在精确到月跟星期。
+            <P>
+                &nbsp&nbsp&nbsp&nbsp一年之内<br >
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp1、  拥有一手好字<br>
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp2、  配喜欢的看一次演唱会<br >
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp3、  拿一次奖学金<br >
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp4、  爬山看一次日出，去海边看一次日出<br >
+            </P>
+            <p>
+                &nbsp&nbsp&nbsp&nbsp两年之内<br >
+                &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp1、  学好英语<br >
+                &nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp2、  学习日语<br >
+                &nbsp&nbsp&nbsp&nbsp3、  坚持锻炼，坚持早起，养成好习惯<br >
+                &nbsp&nbsp&nbsp&nbsp4、  看完50本书<br >
+            </p>
+            <p>
+                &nbsp&nbsp&nbsp&nbsp四年之内<br >
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp1、  从东北骑车回家<br>
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp2、  带父母出去旅行一次<br >
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp3、  学习厨师，做一手好饭菜<br >
+            </p>
+            <p>
+                &nbsp&nbsp&nbsp&nbsp八年之内<br >
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp1、  学会弹吉他<br >
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp2、  拥有自己的公司<br >
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp3、  学好日语，看完200本书<br >
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp4、  在长沙有一套房子<br >
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp5、  旅行结婚<br >
+            </p>
+            <p>
+                &nbsp&nbsp&nbsp&nbsp十年之内<br >
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp1、  开一家小店（类似于独立书店）<br >
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp2、  学习书法（毛笔字）<br >
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp3、  拥有自己的事业<br >
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp4、  去国外生活一段时间<br >
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp5、  拥有自己的跑车和别墅<br >
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp6、  赡养身边的亲人（包括父母，姨母，伯父）<br >
+            </p>
+        </div>
+        </div>
+
+    </body>
+</html>
